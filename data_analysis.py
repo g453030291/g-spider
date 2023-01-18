@@ -4,7 +4,7 @@ import datasource as db
 
 if __name__ == "__main__":
     mysql = db.Mysql()
-    # startDatetime = datetime.date.today().__str__() + " 00:00:00"
+    # startDatetime = datetime.date.today().__str__() + " 00:00:00"----
     # endDatetime = datetime.date.today().__add__(-1).__str__() + " 23:59:59"
     startDatetime = datetime.datetime(2023, 1, 8, 0, 0, 0).__str__()
     endDatetime = datetime.datetime(2023, 1, 8, 23, 59, 59).__str__()
