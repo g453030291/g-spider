@@ -10,13 +10,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-#    - uses: actions/checkout@v3
-#    - name: Build the Docker image
-#      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-    - name: Build and push
-      uses: docker/build-push-action@v3
-      with:
-        context: .
-        file: ./Dockerfile
-        push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/clockbox:latest
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag g-spider:$(date +%s)
