@@ -12,4 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag g-spider:$(date +%s)
+    - run: docker build . --file Dockerfile --tag g-spider:$(date +%s)
+    - run: docker login --username=g453030291 registry.cn-hangzhou.aliyuncs.com
+    - run: g453030291
+    - run: docker images
+    - run: docker tag [ImageId] registry.cn-hangzhou.aliyuncs.com/g-argo/g-repo-argo:[镜像版本号]
+    - run: docker push registry.cn-hangzhou.aliyuncs.com/g-argo/g-repo-argo:[镜像版本号]
